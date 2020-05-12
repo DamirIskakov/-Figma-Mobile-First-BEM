@@ -1,0 +1,399 @@
+
+/* new life */
+
+.body {
+    background: #f8f8f8;
+    font-family: 'TT Lakes Thin', sans-serif;
+    margin: 0;
+
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.root__title {
+    font-family: "TT Lakes Bold", sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+}
+
+.title {
+    border-left: 4px solid #41F6D7;
+    padding: 0 24px;
+    margin: 10px 0;
+}
+
+.header {
+    padding: 10px 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.root__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 2px 3px 0px #D9FFF5;
+    font-family: 'TT Lakes Thin', sans-serif;
+}
+
+/*3 блока в header */
+.header__icon {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.button {
+    border: none;
+    padding: 0;
+    padding-right: 50px;
+    margin: 0px;
+    height: 40px;
+}
+
+.button__repair,
+.button__checkstatus {
+    display: flex;
+    align-items: center;
+    padding: inherit;
+}
+
+.button--icon--burger,
+.button--icon--call,
+.button--icon--chat,
+.button--icon--profile,
+.button--icon--repair,
+.button--icon--checkstatus{
+    background-repeat: no-repeat;
+    background-position: calc(100% - 5px) 50%;
+    background-color: transparent;
+}
+
+
+
+.button--icon--burger {
+    background-image: url(/img/icons/burger.svg);
+}
+
+.button--icon--call {
+    background-image: url(/img/icons/call.svg);
+}
+.button--icon--chat {
+    background-image: url(/img/icons/chat.svg);
+}
+.button--icon--profile {
+    background-image: url(/img/icons/profile.svg);
+}
+.button--icon--repair {
+    background-image: url(/img/icons/repair.svg);
+}
+.button--icon--checkstatus {
+    background-image: url(/img/icons/checkstatus.svg);
+}
+
+.divider-one,
+.divider-two {
+    min-width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: #EAEAEA;
+    margin: 0 15px;
+}
+
+/*string-menu*/
+
+.string-menu {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 1120px;
+    white-space: nowrap;
+    overflow: auto;
+    margin: 5px 0 5px 25px;
+}
+
+.string-menu__item--active { 
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background: #FFF;
+    padding: 8px 20px;
+}
+
+.string-menu__item {
+    border-radius: 2px solid #f8f8f8;
+    padding: 8px 25px;
+    background-color: transparent; 
+}
+
+.string-menu__text {
+    font-family: "TT Lakes Thin", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+}
+
+button {
+    border: 0;  
+}
+
+/*content*/
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.post {
+    flex: 1;
+    overflow: hidden;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    margin: 0 20px;
+}
+
+.post__image {
+    flex: 1;
+    overflow: hidden;
+    
+    
+}
+
+.post-img__office-logo{
+    display: block;
+    width: 100%;
+}
+
+
+.post__text {
+    font-family: "TT Lakes Thin", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.btn {
+    background-color: #f8f8f8;
+}
+
+.post__btn-readmore {
+    display: flex;
+    align-items: center;
+    font-family: "TT Lakes Thin",sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    margin: 0 0 10px 6px;
+}
+
+
+
+
+/*@media screen and (max-width: 320px) {
+    .root {
+        flex-direction: row;
+    }
+
+    .root__title {
+        flex-grow: 1;
+        order: 1;
+
+        white-space: nowrap;
+    }
+    .root__header {
+        order: 2;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .button--icon--call, 
+    .button--icon--chat,
+    .button--icon--profile,
+    .divider {
+        display: none;
+    }
+    
+}*/
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .root {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .root__title {
+        width: 100%;
+        flex-grow: 1;
+        order: 2;   
+        margin-top: 30px;
+    }
+
+    .root__header {
+        width: 100%;
+        order: 1;
+        background-color: transparent;
+        box-shadow: none;
+        background: white; 
+    }
+
+    .string-menu {
+        flex-wrap: nowrap;
+    }
+
+    .button__text {
+        display: none;
+    }
+
+    .divider-one {
+        display: none;
+    }
+    .button--icon--burger {
+        margin-right: 10px;
+    }
+
+    .button--icon--call,
+    .button--icon--chat,
+    .button--icon--profile {
+        display: none;
+    }
+
+    
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post {
+        padding-left: 16px;
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+
+    .post__text--second,
+    .post__text--third {
+        display: none;
+    }
+
+    .post-img__office-logo {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+   .root {
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: 100%;
+       
+   }
+
+   .root__title {
+        width: 100%;
+        flex-grow: 1;
+        order: 2;
+        margin-top: 30px;
+    
+    }
+
+    .root__header {
+        display: flex;
+    
+        width: 100%;
+        order: 1;
+        background-color: transparent;
+        box-shadow: none;
+        background: white;
+    }
+
+   .button__text {
+       display: none;
+   }
+
+   .header {
+       display: flex;
+       flex-direction: row;
+   }
+
+   .divider-two {
+       display: none;
+   }
+
+   .button--icon--burger,
+   .button--icon--logo {
+       display: flex;
+       justify-content: flex-start;
+   }
+
+   .button--icon--call,
+   .button--icon--chat,
+   .button--icon--profile,
+   .button--icon--repair,
+   .button--icon--checkstatus {   
+       display: flex;
+       justify-content: flex-end;
+   }
+
+    .post__text--third {
+       display: none;
+   }
+
+}
+
+
+@media screen and (min-width: 1121px) {
+    
+    .root{
+        flex-direction: row;
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .root__title {
+        flex-grow: 1;
+        order: 1;
+        white-space: nowrap;
+    }
+
+    .root__header {
+        order: 2;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .button--icon--burger,
+    .button--icon--logo,
+    .divider,
+    .button--icon--call,
+    .button--icon--chat,
+    .button--icon--profile {
+        display: none;
+    }
+
+   .divider-one,
+   .divider-two {
+       display: none;
+   }
+}
+
